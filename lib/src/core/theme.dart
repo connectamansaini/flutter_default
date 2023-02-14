@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'colors.dart';
-import 'constants.dart';
-import 'topography.dart';
+import 'package:flutter_default/src/core/colors.dart';
+import 'package:flutter_default/src/core/constants.dart';
+import 'package:flutter_default/src/core/topography.dart';
 
 class AppThemes {
   AppThemes._();

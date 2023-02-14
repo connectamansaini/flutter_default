@@ -1,19 +1,19 @@
 name: flutter_default
 description: A new Flutter project.
-publish_to: 'none' 
+publish_to: 'none'
 version: 1.0.0+1
 environment:
   sdk: '>=2.19.0 <3.0.0'
 
 dependencies:
+  cupertino_icons: ^1.0.2
   flutter:
     sdk: flutter
-  cupertino_icons: ^1.0.2
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^2.0.0
+  very_good_analysis: ^4.0.0+1
 
 flutter:
   uses-material-design: true
@@ -22,7 +22,7 @@ flutter:
     - assets/
 
 fonts:
-   - family: OpenSans
-     fonts:
-       - asset: assets/fonts/OpenSans-Regular.ttf
-       - asset: assets/fonts/OpenSans-Medium.ttf
+  - family: OpenSans
+    fonts:
+      - asset: assets/fonts/OpenSans-Regular.ttf
+      - asset: assets/fonts/OpenSans-Medium.ttf

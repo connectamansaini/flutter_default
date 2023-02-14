@@ -2,7 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_default/src/core/theme.dart';
 
 class HomeView extends StatefulWidget {
-  const HomeView({super.key, required this.title});
+  const HomeView({
+    required this.title,
+    super.key,
+  });
 
   final String title;
 

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-
-import 'colors.dart';
-import 'constants.dart';
+import 'package:flutter_default/src/core/colors.dart';
+import 'package:flutter_default/src/core/constants.dart';
 
 class AppTypography {
   AppTypography._();
