@@ -3,20 +3,20 @@ import 'package:flutter/material.dart';
 class AppColors {
   AppColors._();
 
-  /// Primary Color of App
-  static const primaryColor = Colors.blue;
+  /// Primary Color
+  static const primaryColor = Colors.deepPurpleAccent;
+  static final primaryColorLight = Colors.deepPurpleAccent.shade100;
+  static final primaryColorDark = Colors.deepPurpleAccent.shade700;
 
-  // Light theme font colors
-  static const primaryLightFontColor = Colors.black;
-  static const secondaryLightFontColor = Color(0xFF616161);
-  static const tertiaryLightFontColor = Color(0xFF9E9E9E);
-  static const floatingActionButtonLightColor =
-      Color.fromARGB(255, 100, 100, 100);
+  // Light theme colors
+  static const lightThemePrimaryFontColor = Colors.black;
+  static const lightThemeSecondaryFontColor = Colors.grey;
+  static final lightThemeTertiaryFontColor = Colors.grey.shade400;
+  static const lightThemeFloatingActionButtonColor = Colors.teal;
 
-  // Dark theme font colors
-  static const primaryDarkFontColor = Colors.white;
-  static const secondaryDarkFontColor = Color(0xFF9E9E9E);
-  static const tertiaryDarkFontColor = Color(0xFF616161);
-  static const floatingActionButtonDarkColor =
-      Color.fromARGB(255, 200, 200, 200);
+  // Dark theme colors
+  static const darkThemePrimaryFontColor = Colors.white;
+  static final darkThemeSecondaryFontColor = Colors.grey.shade800;
+  static final darkThemeTertiaryFontColor = Colors.grey.shade600;
+  static const darkThemeFloatingActionButtonColor = Colors.tealAccent;
 }

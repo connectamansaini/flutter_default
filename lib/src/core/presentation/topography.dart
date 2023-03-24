@@ -1,61 +1,83 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_default/src/core/domain/constants.dart';
 import 'package:flutter_default/src/core/presentation/colors.dart';
 
 class AppTypography {
   AppTypography._();
 
-  //* Appbar title textstyle
-  static const appBarTitleTextStyle = TextStyle(
-    fontSize: Constants.appBarFontSize,
-    fontWeight: FontWeight.bold,
-    fontFamily: Constants.fontFamily,
+  static const fontFamily = 'OpenSans';
+
+  //* Font sizes
+  // Title font size
+  static const largeTitleFontSize = 28.0;
+  static const mediumTitleFontSize = 24.0;
+  static const smallTitleFontSize = 20.0;
+
+  // Body font size
+  static const largeBodyFontSize = 18.0;
+  static const mediumBodyFontSize = 16.0;
+  static const smallBodyFontSize = 14.0;
+
+  // Caption font size
+  static const captionFontSize = 12.0;
+
+  //* TextStyle
+  // Title textStyles
+  static const titleLarge = TextStyle(
+    fontFamily: fontFamily,
+    fontSize: largeTitleFontSize,
+    color: AppColors.lightThemePrimaryFontColor,
   );
 
-  //* Title textstyles
-  static const largeTitleTextStyle = TextStyle(
-    fontSize: Constants.largeTitleFontSize,
-    color: AppColors.primaryLightFontColor,
+  static const titleMedium = TextStyle(
+    fontFamily: fontFamily,
+    fontSize: mediumTitleFontSize,
+    color: AppColors.lightThemePrimaryFontColor,
   );
 
-  static const mediumTitleTextStyle = TextStyle(
-    fontSize: Constants.mediumTitleFontSize,
-    color: AppColors.primaryLightFontColor,
+  static const titleSmall = TextStyle(
+    fontFamily: fontFamily,
+    fontSize: smallTitleFontSize,
+    color: AppColors.lightThemePrimaryFontColor,
   );
 
-  static const smallTitleTextStyle = TextStyle(
-    fontSize: Constants.smallTitleFontSize,
-    color: AppColors.primaryLightFontColor,
+  // Body textStyles
+  static const bodyLarge = TextStyle(
+    fontFamily: fontFamily,
+    fontSize: largeBodyFontSize,
+    color: AppColors.lightThemePrimaryFontColor,
   );
 
-  //* Body textstyles
-  static const largeBodyTextStyle = TextStyle(
-    fontSize: Constants.largeBodyFontSize,
-    color: AppColors.primaryLightFontColor,
+  static const bodyMedium = TextStyle(
+    fontFamily: fontFamily,
+    fontSize: mediumBodyFontSize,
+    color: AppColors.lightThemePrimaryFontColor,
   );
 
-  static const mediumBodyTextStyle = TextStyle(
-    fontSize: Constants.mediumBodyFontSize,
-    color: AppColors.primaryLightFontColor,
+  static const bodySmall = TextStyle(
+    fontFamily: fontFamily,
+    fontSize: smallBodyFontSize,
+    color: AppColors.lightThemePrimaryFontColor,
   );
 
-  static const smallBodyTextStyle = TextStyle(
-    fontSize: Constants.smallBodyFontSize,
-    color: AppColors.primaryLightFontColor,
+  // Caption text styles
+  static const caption = TextStyle(
+    fontFamily: fontFamily,
+    fontSize: captionFontSize,
+    color: AppColors.lightThemePrimaryFontColor,
   );
 
-  //* Tab bar label textstyles
+  //* TabBar label textStyles
   static const tabBarLabelTextStyle = TextStyle(
-    fontSize: Constants.largeBodyFontSize,
+    fontSize: largeBodyFontSize,
     fontWeight: FontWeight.bold,
-    fontFamily: Constants.fontFamily,
+    fontFamily: fontFamily,
     color: AppColors.primaryColor,
   );
 
   static const tabBarLabelUnselectedTextStyle = TextStyle(
-    fontSize: Constants.largeBodyFontSize,
+    fontSize: largeBodyFontSize,
     fontWeight: FontWeight.bold,
-    fontFamily: Constants.fontFamily,
-    color: AppColors.secondaryLightFontColor,
+    fontFamily: fontFamily,
+    color: AppColors.lightThemeSecondaryFontColor,
   );
 }

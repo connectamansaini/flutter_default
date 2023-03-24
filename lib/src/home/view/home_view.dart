@@ -42,39 +42,40 @@ class _HomeViewState extends State<HomeView> {
           children: <Widget>[
             Text(
               'Hello World!',
-              style: Theme.of(context).largeTitlePrimaryTextStyle,
+              style: Theme.of(context).titleLargePrimary,
             ),
             Text(
               'Hello World!',
-              style: Theme.of(context).largeTitleSecondaryTextStyle,
+              // TODO(ask):  Where is secondary color?
+              style: Theme.of(context).titleLargeSecondary,
             ),
             Text(
               'Hello World!',
-              style: Theme.of(context).largeTitleTertiaryTextStyle,
+              style: Theme.of(context).titleLargeTertiary,
             ),
             Text(
               'Hello World!',
-              style: Theme.of(context).mediumTitlePrimaryTextStyle,
+              style: Theme.of(context).titleMediumPrimary,
             ),
             Text(
               'Hello World!',
-              style: Theme.of(context).mediumTitleSecondaryTextStyle,
+              style: Theme.of(context).titleMediumSecondary,
             ),
             Text(
               'Hello World!',
-              style: Theme.of(context).mediumTitleTertiaryTextStyle,
+              style: Theme.of(context).titleMediumTertiary,
             ),
             Text(
               'Hello World!',
-              style: Theme.of(context).smallTitlePrimaryTextStyle,
+              style: Theme.of(context).titleSmallPrimary,
             ),
             Text(
               'Hello World!',
-              style: Theme.of(context).smallTitleSecondaryTextStyle,
+              style: Theme.of(context).titleSmallSecondary,
             ),
             Text(
               'Hello World!',
-              style: Theme.of(context).smallTitleTertiaryTextStyle,
+              style: Theme.of(context).titleSmallTertiary,
             ),
             const Divider(),
             const Text(

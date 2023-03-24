@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_default/src/core/domain/constants.dart';
 import 'package:flutter_default/src/core/presentation/colors.dart';
 import 'package:flutter_default/src/core/presentation/topography.dart';
 
@@ -12,21 +11,18 @@ class AppThemes {
     colorScheme: const ColorScheme.light(
       primary: AppColors.primaryColor,
     ),
-    fontFamily: Constants.fontFamily,
-    appBarTheme: const AppBarTheme(
-      titleTextStyle: AppTypography.appBarTitleTextStyle,
-    ),
+    fontFamily: AppTypography.fontFamily,
     textTheme: const TextTheme(
-      bodyLarge: AppTypography.largeBodyTextStyle,
-      bodyMedium: AppTypography.mediumBodyTextStyle,
-      bodySmall: AppTypography.smallBodyTextStyle,
+      bodyLarge: AppTypography.bodyLarge,
+      bodyMedium: AppTypography.bodyMedium,
+      bodySmall: AppTypography.bodySmall,
     ),
     tabBarTheme: const TabBarTheme(
       labelStyle: AppTypography.tabBarLabelTextStyle,
       unselectedLabelStyle: AppTypography.tabBarLabelUnselectedTextStyle,
     ),
     floatingActionButtonTheme: const FloatingActionButtonThemeData(
-      backgroundColor: AppColors.floatingActionButtonLightColor,
+      backgroundColor: AppColors.lightThemeFloatingActionButtonColor,
     ),
   );
 
@@ -36,98 +32,114 @@ class AppThemes {
     colorScheme: const ColorScheme.dark(
       primary: AppColors.primaryColor,
     ),
-    fontFamily: Constants.fontFamily,
-    appBarTheme: const AppBarTheme(
-      titleTextStyle: AppTypography.appBarTitleTextStyle,
-    ),
+    fontFamily: AppTypography.fontFamily,
     textTheme: TextTheme(
-      bodyLarge: AppTypography.largeBodyTextStyle.copyWith(
-        color: AppColors.primaryDarkFontColor,
+      bodyLarge: AppTypography.bodyLarge.copyWith(
+        color: AppColors.darkThemePrimaryFontColor,
       ),
-      bodyMedium: AppTypography.mediumBodyTextStyle.copyWith(
-        color: AppColors.primaryDarkFontColor,
+      bodyMedium: AppTypography.bodyMedium.copyWith(
+        color: AppColors.darkThemePrimaryFontColor,
       ),
-      bodySmall: AppTypography.smallBodyTextStyle.copyWith(
-        color: AppColors.primaryDarkFontColor,
+      bodySmall: AppTypography.bodySmall.copyWith(
+        color: AppColors.darkThemePrimaryFontColor,
       ),
     ),
     tabBarTheme: TabBarTheme(
       labelStyle: AppTypography.tabBarLabelTextStyle,
       unselectedLabelStyle:
           AppTypography.tabBarLabelUnselectedTextStyle.copyWith(
-        color: AppColors.secondaryDarkFontColor,
+        color: AppColors.darkThemeSecondaryFontColor,
       ),
     ),
     floatingActionButtonTheme: const FloatingActionButtonThemeData(
-      backgroundColor: AppColors.floatingActionButtonDarkColor,
+      backgroundColor: AppColors.darkThemeFloatingActionButtonColor,
     ),
   );
 }
 
 extension ThemeDataX on ThemeData {
+  /// Is current theme mode dark
   bool get isDark => brightness == Brightness.dark;
 
-  TextStyle get largeTitlePrimaryTextStyle => isDark
-      ? AppTypography.largeTitleTextStyle.copyWith(
-          color: AppColors.primaryDarkFontColor,
-        )
-      : AppTypography.largeTitleTextStyle;
+  //* Font Colors
+  /// Primary font color based on theme mode
+  Color get primaryFontColor => isDark
+      ? AppColors.darkThemePrimaryFontColor
+      : AppColors.lightThemePrimaryFontColor;
 
-  TextStyle get largeTitleSecondaryTextStyle => isDark
-      ? AppTypography.largeTitleTextStyle.copyWith(
-          color: AppColors.secondaryDarkFontColor,
-        )
-      : AppTypography.largeTitleTextStyle.copyWith(
-          color: AppColors.secondaryLightFontColor,
-        );
+  /// Secondary font color based on theme mode
+  Color get secondaryFontColor => isDark
+      ? AppColors.darkThemeSecondaryFontColor
+      : AppColors.lightThemeSecondaryFontColor;
 
-  TextStyle get largeTitleTertiaryTextStyle => isDark
-      ? AppTypography.largeTitleTextStyle.copyWith(
-          color: AppColors.tertiaryDarkFontColor,
-        )
-      : AppTypography.largeTitleTextStyle.copyWith(
-          color: AppColors.tertiaryLightFontColor,
-        );
-  TextStyle get mediumTitlePrimaryTextStyle => isDark
-      ? AppTypography.mediumTitleTextStyle.copyWith(
-          color: AppColors.primaryDarkFontColor,
-        )
-      : AppTypography.mediumTitleTextStyle;
+  /// Tertiary font color based on theme mode
+  Color get tertiaryFontColor => isDark
+      ? AppColors.darkThemeTertiaryFontColor
+      : AppColors.lightThemeTertiaryFontColor;
 
-  TextStyle get mediumTitleSecondaryTextStyle => isDark
-      ? AppTypography.mediumTitleTextStyle.copyWith(
-          color: AppColors.secondaryDarkFontColor,
-        )
-      : AppTypography.mediumTitleTextStyle.copyWith(
-          color: AppColors.secondaryLightFontColor,
-        );
+//* Title text styles
+  TextStyle get titleSmallPrimary =>
+      AppTypography.titleSmall.copyWith(color: primaryFontColor);
 
-  TextStyle get mediumTitleTertiaryTextStyle => isDark
-      ? AppTypography.mediumTitleTextStyle.copyWith(
-          color: AppColors.tertiaryDarkFontColor,
-        )
-      : AppTypography.mediumTitleTextStyle.copyWith(
-          color: AppColors.tertiaryLightFontColor,
-        );
-  TextStyle get smallTitlePrimaryTextStyle => isDark
-      ? AppTypography.smallTitleTextStyle.copyWith(
-          color: AppColors.primaryDarkFontColor,
-        )
-      : AppTypography.smallTitleTextStyle;
+  TextStyle get titleMediumPrimary =>
+      AppTypography.titleMedium.copyWith(color: primaryFontColor);
 
-  TextStyle get smallTitleSecondaryTextStyle => isDark
-      ? AppTypography.smallTitleTextStyle.copyWith(
-          color: AppColors.secondaryDarkFontColor,
-        )
-      : AppTypography.smallTitleTextStyle.copyWith(
-          color: AppColors.secondaryLightFontColor,
-        );
+  TextStyle get titleLargePrimary =>
+      AppTypography.titleLarge.copyWith(color: primaryFontColor);
 
-  TextStyle get smallTitleTertiaryTextStyle => isDark
-      ? AppTypography.smallTitleTextStyle.copyWith(
-          color: AppColors.tertiaryDarkFontColor,
-        )
-      : AppTypography.smallTitleTextStyle.copyWith(
-          color: AppColors.tertiaryLightFontColor,
-        );
+  TextStyle get titleSmallSecondary =>
+      AppTypography.bodySmall.copyWith(color: secondaryFontColor);
+
+  TextStyle get titleMediumSecondary =>
+      AppTypography.bodyMedium.copyWith(color: secondaryFontColor);
+
+  TextStyle get titleLargeSecondary =>
+      AppTypography.bodyLarge.copyWith(color: secondaryFontColor);
+
+  TextStyle get titleSmallTertiary =>
+      AppTypography.bodySmall.copyWith(color: tertiaryFontColor);
+
+  TextStyle get titleMediumTertiary =>
+      AppTypography.bodyMedium.copyWith(color: tertiaryFontColor);
+
+  TextStyle get titleLargeTertiary =>
+      AppTypography.bodyLarge.copyWith(color: tertiaryFontColor);
+
+  //* Body text styles
+  TextStyle get bodySmallPrimary =>
+      AppTypography.bodySmall.copyWith(color: primaryFontColor);
+
+  TextStyle get bodySmallSecondary =>
+      AppTypography.bodySmall.copyWith(color: secondaryFontColor);
+
+  TextStyle get bodySmallTertiary =>
+      AppTypography.bodySmall.copyWith(color: tertiaryFontColor);
+
+  TextStyle get bodyMediumPrimary =>
+      AppTypography.bodyMedium.copyWith(color: primaryFontColor);
+
+  TextStyle get bodyMediumSecondary =>
+      AppTypography.bodyMedium.copyWith(color: secondaryFontColor);
+
+  TextStyle get bodyMediumTertiary =>
+      AppTypography.bodyMedium.copyWith(color: tertiaryFontColor);
+
+  TextStyle get bodyLargePrimary =>
+      AppTypography.bodyLarge.copyWith(color: primaryFontColor);
+
+  TextStyle get bodyLargeSecondary =>
+      AppTypography.bodyLarge.copyWith(color: secondaryFontColor);
+
+  TextStyle get bodyLargeTertiary =>
+      AppTypography.bodyLarge.copyWith(color: tertiaryFontColor);
+
+  //* Caption text styles
+  TextStyle get captionPrimary =>
+      AppTypography.caption.copyWith(color: primaryFontColor);
+
+  TextStyle get captionSecondary =>
+      AppTypography.caption.copyWith(color: secondaryFontColor);
+
+  TextStyle get captionTertiary =>
+      AppTypography.caption.copyWith(color: tertiaryFontColor);
 }
