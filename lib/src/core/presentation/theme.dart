@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_default/src/core/presentation/colors.dart';
+import 'package:flutter_default/src/core/presentation/constants.dart';
 import 'package:flutter_default/src/core/presentation/topography.dart';
 
 class AppThemes {
@@ -11,7 +12,7 @@ class AppThemes {
     colorScheme: const ColorScheme.light(
       primary: AppColors.primaryColor,
     ),
-    fontFamily: AppTypography.fontFamily,
+    fontFamily: Constants.fontFamily,
     textTheme: const TextTheme(
       bodyLarge: AppTypography.bodyLarge,
       bodyMedium: AppTypography.bodyMedium,
@@ -32,7 +33,7 @@ class AppThemes {
     colorScheme: const ColorScheme.dark(
       primary: AppColors.primaryColor,
     ),
-    fontFamily: AppTypography.fontFamily,
+    fontFamily: Constants.fontFamily,
     textTheme: TextTheme(
       bodyLarge: AppTypography.bodyLarge.copyWith(
         color: AppColors.darkThemePrimaryFontColor,
